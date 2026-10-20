@@ -44,9 +44,9 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.VH> {
     public void onBindViewHolder(@NonNull VH h, int position) {
         Producto p = lista.get(position);
         h.tvNombre.setText(p.getName());
-        h.tvDetalle.setText("Precio: $" + p.getPrice() + " | Stock: " + p.getStock()
+        h.tvDetalle.setText("Precio: L." + p.getPrice() + " | Stock: " + p.getStock()
                 + " | Codigo: " + (p.getBarcode() == null ? "-" : p.getBarcode())
-                + " | Valor: $" + String.format("%.2f", p.getValorTotal()));
+                + " | Valor: L." + String.format("%.2f", p.getValorTotal()));
         if (onEditar != null) {
             h.itemView.setOnClickListener(v -> onEditar.onClick(p));
         }

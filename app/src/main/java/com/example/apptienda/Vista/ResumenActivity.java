@@ -47,7 +47,7 @@ public class ResumenActivity extends AppCompatActivity {
 
     private void cargarResumen() {
         ResumenInventario r = controlador.obtenerResumen();
-        tvValorTotal.setText("Valor total del inventario: $" + String.format("%.2f", r.getValorTotal()));
+        tvValorTotal.setText("Valor total del inventario: L." + String.format("%.2f", r.getValorTotal()));
         adapterTop5.setLista(r.getTop5());
         adapterAlertas.setLista(r.getAlertas());
         if (r.getAlertas() == null || r.getAlertas().isEmpty()) {
